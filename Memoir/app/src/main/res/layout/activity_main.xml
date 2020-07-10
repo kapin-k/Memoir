@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:fitsSystemWindows="true"
     android:orientation="horizontal"
     tools:context=".MainActivity">
 
@@ -13,21 +12,32 @@
         android:id="@+id/backgroundImageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@color/colorBlackIOS" />
+        android:scaleType="centerCrop"
+        android:src="@drawable/dark_background" />
+
+    <!--    <FrameLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        >-->
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginVertical="50dp"
-        app:cardBackgroundColor="@color/colorWhite"
-        app:cardCornerRadius="5dp"
+        android:layout_marginVertical="120dp"
+        app:cardBackgroundColor="@color/colorWhiteIOS"
+        app:cardCornerRadius="10dp"
         app:cardElevation="50dp">
 
-        <FrameLayout
+        <dev.skymansandy.scratchcardlayout.ui.ScratchCardLayout
+            android:id="@+id/scratchCard"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            app:scratchDrawable="@drawable/reveal_picture_2"
+            app:scratchEnabled="true"
+            app:scratchRevealFullAtPercent="50"
+            app:scratchWidth="40dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -83,8 +93,10 @@
 
             </LinearLayout>
 
-        </FrameLayout>
+        </dev.skymansandy.scratchcardlayout.ui.ScratchCardLayout>
 
     </androidx.cardview.widget.CardView>
+
+    <!--    </FrameLayout>-->
 
 </FrameLayout>

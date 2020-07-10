@@ -40,10 +40,12 @@ dependencies {
     implementation 'jp.wasabeef:glide-transformations:4.1.0'
     //Material Components
     implementation 'com.google.android.material:material:1.1.0'
-    //Circular Image View
-    implementation 'de.hdodenhof:circleimageview:3.1.0'
     //Photo View Zoom
     implementation 'com.jsibbold:zoomage:1.3.1'
     //Card Stack View
     implementation "com.yuyakaido.android:card-stack-view:2.3.4"
+    //Scratch Card
+    implementation 'com.github.AnupKumarPanwar:ScratchView:1.3'
+//    implementation 'com.jackpocket:scratchoff:1.3.1'
+    implementation 'in.codeshuffle.scratchcardlayout:ScratchCardLayout:1.0.8'
 }
