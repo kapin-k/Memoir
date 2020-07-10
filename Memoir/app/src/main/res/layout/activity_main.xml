@@ -15,10 +15,13 @@
         android:scaleType="centerCrop"
         android:src="@drawable/reveal_picture_1" />
 
-    <!--    <FrameLayout-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="match_parent"-->
-    <!--        >-->
+    <com.yuyakaido.android.cardstackview.CardStackView
+        android:id="@+id/cardStack"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="120dp"
+        android:visibility="gone" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -26,16 +29,17 @@
         android:layout_height="match_parent"
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="120dp"
+        android:visibility="visible"
         app:cardBackgroundColor="@color/colorWhiteIOS"
         app:cardCornerRadius="10dp"
-        app:cardElevation="50dp">
+        app:cardElevation="100dp">
 
         <dev.skymansandy.scratchcardlayout.ui.ScratchCardLayout
             android:id="@+id/scratchCard"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:scratchDrawable="@drawable/reveal_picture_2"
-            app:scratchEnabled="true"
+            app:scratchEnabled="false"
             app:scratchRevealFullAtPercent="50"
             app:scratchWidth="40dp">
 
@@ -52,7 +56,8 @@
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginTop="40dp"
                     android:layout_weight="11"
-                    android:background="@drawable/background" />
+                    android:background="@drawable/background"
+                    android:scaleType="centerCrop" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -64,11 +69,10 @@
                     android:weightSum="5">
 
                     <TextView
-                        android:id="@+id/textView1"
+                        android:id="@+id/headerTV"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1.5"
-                        android:background="@color/colorWhiteIOS"
                         android:fontFamily="@font/poppins_semibold"
                         android:gravity="center"
                         android:text="18 JUNE 2020"
@@ -77,11 +81,10 @@
                         tools:ignore="NestedWeights" />
 
                     <TextView
-                        android:id="@+id/textView2"
+                        android:id="@+id/captionTV"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="3"
-                        android:background="@color/colorWhiteIOS"
                         android:fontFamily="@font/poppins_medium"
                         android:gravity="center"
                         android:text="This is where the caption goes"
@@ -96,7 +99,5 @@
         </dev.skymansandy.scratchcardlayout.ui.ScratchCardLayout>
 
     </androidx.cardview.widget.CardView>
-
-    <!--    </FrameLayout>-->
 
 </FrameLayout>
